@@ -1,11 +1,11 @@
-<h1>Create a new Figure</h1>
+<h1>Update Figure</h1>
 
-<form action="/figures" method="POST">
+<form action="/figures/<%=@figure.id%>" method="post">
 
   <label>Figure Name:</label>
   <br></br>
   <label>name:</label>
-  <input type="text" name="figure[name]" id="figure_name"></input>
+  <input type="text" name="figure[name]" id="figure_name" value="<%=@figure.name%>"></input>
   <br></br>
 
   <label>New Title Name:</label>
@@ -30,6 +30,6 @@
   <% end %>
   <br></br>
 
-  <input type="submit" value="Create New Figure" name="Create New Figure" id="Create New Figure">
+  <input type="submit" value="Edit Figure" name="Edit Figure" id="Edit Figure">
 
 </form>
